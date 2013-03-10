@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/showr/!svn/ver/124/1/beaker/docs
+END
+changes.rst
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/showr/!svn/ver/106/1/beaker/docs/changes.rst
+END
+caching.rst
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/showr/!svn/ver/105/1/beaker/docs/caching.rst
+END
+glossary.rst
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/showr/!svn/ver/109/1/beaker/docs/glossary.rst
+END
+conf.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/showr/!svn/ver/107/1/beaker/docs/conf.py
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/showr/!svn/ver/110/1/beaker/docs/Makefile
+END
+sessions.rst
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/showr/!svn/ver/112/1/beaker/docs/sessions.rst
+END
+configuration.rst
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/showr/!svn/ver/108/1/beaker/docs/configuration.rst
+END
+index.rst
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/showr/!svn/ver/111/1/beaker/docs/index.rst
+END

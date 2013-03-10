@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>The weibo image show</title>
+
+        <script src="http://tjs.sjs.sinajs.cn/t35/apps/opent/js/frames/client.js" language="JavaScript"></script>
+        
+	<meta charset="utf-8">
+        <meta property="wb:webmaster" content="19e507f768c68613" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+        
+        <!--oauth-->
+        <meta property="wb:webmaster" content="19e507f768c68613" />
+        
+        <!--for open.weibo.com-->
+        <script src="http://tjs.sjs.sinajs.cn/t35/apps/opent/js/frames/client.js" language="JavaScript"></script>
+        
+	<!--bootstrap-->
+        <link href="static/css/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="static/css/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="static/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        
+        
+        <!--the css config-->
+        <script src="static/js/homepage_config.js"></script>
+        <link href="static/css/homepage_config.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--nav bar-->
+    <div class="navbar">
+    	<div class="navbar-inner">
+        <!--SHOWR-->
+    	<a class="brand" href="file://localhost/Users/bracken/product/showr/view/showr_homepage.html">SHOWR<a>
+        
+        {% if username %}
+          <a class="brand">{{username}}</a>
+        {% endif %}
+        
+        <!--LOGIN-->
+        {% if username %}
+        <form class="navbar-form pull-right" action="/login_to_weibo">
+    		<button type="submit" class="btn">Logout</button>
+    	</form>
+        {% else %}
+        <form class="navbar-form pull-right" action="/login_to_weibo">
+    		<button type="submit" class="btn">LoginWeibo</button>
+    	</form>
+        {% endif %}
+        
+
+        
+        <!--NEARBY-->
+        {% if username %}
+        <form class="navbar-form pull-right" action="/weibo_poi_get">
+    		<button type="submit" class="btn">NearBy</button>
+    	</form>     
+        {% endif %}
+       
+        <!--SEARCH-->
+        {% if username %}
+        <form class="navbar-form pull-right" action="/weibo_position_search_data" >
+          <input type="text" name="address" />
+          <!--<input type="submit" />-->
+          <input type="submit" class="btn" >
+        </form>
+        {% endif %}
+    	</div>
+
+    </div>
+
+	<!--the part of content--> 
+	<div class="row-fluid">
+		<div class="container-fluid">
+                        <div class="span6">
+				
+                        </div>
+                  <div class="span2">
+                                
+		</div>
+	</div>
+        
+        
+        
+  <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/js/jquery-1.7.2.js"></script>
+    <script src="/static/js/bootstrap-transition.js"></script>
+    <script src="/static/js/bootstrap-alert.js"></script>
+    <script src="/static/js/bootstrap-modal.js"></script>
+    <script src="/static/js/bootstrap-dropdown.js"></script>
+    <script src="/static/js/bootstrap-scrollspy.js"></script>
+    <script src="/static/js/bootstrap-tab.js"></script>
+    <script src="/static/js/bootstrap-tooltip.js"></script>
+    <script src="/static/js/bootstrap-popover.js"></script>
+    <script src="/static/js/bootstrap-button.js"></script>
+    <script src="/static/js/bootstrap-collapse.js"></script>
+    <script src="/static/js/bootstrap-carousel.js"></script>
+    <script src="/static/js/bootstrap-typeahead.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/showr/!svn/ver/97/1/beaker/crypto
+END
+pbkdf2.py
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/showr/!svn/ver/95/1/beaker/crypto/pbkdf2.py
+END
+pycrypto.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/showr/!svn/ver/96/1/beaker/crypto/pycrypto.py
+END
+util.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/showr/!svn/ver/97/1/beaker/crypto/util.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/showr/!svn/ver/93/1/beaker/crypto/__init__.py
+END
+jcecrypto.py
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/showr/!svn/ver/94/1/beaker/crypto/jcecrypto.py
+END

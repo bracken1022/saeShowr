@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>GMaps.js &mdash; Basic</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script type="text/javascript" src="static/js/gmaps.js"></script>
+        <script type="text/javascript" src="static/js/jquery.tmpl.js"></script>
+        
+        <meta property="qc:admins" content="35315630321105631611006375" />
+	<meta charset="utf-8">
+	<title>mainpage</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+        
+
+        <!--for open.weibo.com-->
+        <script src="http://tjs.sjs.sinajs.cn/t35/apps/opent/js/frames/client.js" language="JavaScript"></script>
+        
+ <!--<script type="text/javascript" src="./static/view/place_photos.js"></script>-->
+        <!--jquery cookies -->
+        <script type="text/javascript" src="static/js/jquery-cookies.js"></script>
+ 
+ 	<!--bootstrap-->
+        <link href="static/css/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="static/css/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="static/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+ 
+ 
+         
+	<!== Le styles -->
+  <link rel="stylesheet" type="text/css" href="static/css/bootstrap/css/bootstrap.css">
+	<style type="text/css">
+		body {
+			padding-top: 60px;
+			padding-bottom: 40px;
+		}
+	</style>
+  <link rel="stylesheet" type="text/css" href="static/css/bootstrap/css/bootstrap-responsive.css">
+  	<script type="text/javascript">
+	    $(document).ready(function() {
+	        var cont_left = 100;
+              /*$("a img").hover(function() {
+	            // hover in
+	            $(this).parent().parent().css("z-index", 1);
+	            $(this).animate({
+	               height: "250",
+	               width: "250",
+	               left: "-=50",
+	               top: "-=50"
+	            }, "fast");
+	        }, function() {
+	            // hover out
+	            $(this).parent().parent().css("z-index", 0);
+	            $(this).animate({
+	                height: "150",
+	                width: "150",
+	                left: "+=50",
+	               top: "+=50"
+	            }, "fast");
+                });*/
+	        
+	        $(".img").each(function(index) {
+	            var left = (index * 160) + cont_left;
+	            $(this).css("left", left + "px");
+	        });
+	    });
+  	</script>
+  	<style type="text/css">
+        body{
+        	margin: 0;
+        	padding: 0;
+        	font-family: Arial, "Free Sans";
+        }
+        #main{
+        	background: #0099cc;
+        	margin-top: 0;
+        	padding: 2px 0 4px 0;
+        	text-align: center;
+        }
+        #main a{
+        	color: #ffffff;
+        	text-decoration: none;
+        	font-size: 12px;
+        	font-weight: bold;
+        	font-family: Arial;
+        }
+        #main a:hover{
+        	text-decoration: underline;
+        }
+        #container-span4 {
+        	text-align: center;
+        	position: absolute;
+        	left: 100px;
+        	margin-top: 100px;
+        	width: 790px;
+        }
+        .img {
+        	position: fixed;
+        	z-index: 0;
+        }
+        .end {
+        	margin-right: 0;
+        }
+        .clear {
+        	clear: both;
+        }
+        .img a img{
+        	position: relative;
+        	border: 0 solid #fff;
+        }
+        .container1{
+            overflow-y: scroll;
+            overflow-x: hidden;
+            height: 675px;
+            margin-left:1px;
+        }
+
+
+  	</style>
+
+</head>
+
+        
+
+  <body>
+    <!--nav bar-->
+    <div class="navbar">
+    	<div class="navbar-inner">
+        <!--SHOWR-->
+    	<a class="brand" href="file://localhost/Users/bracken/product/showr/view/showr_homepage.html">SHOWR<a>
+        
+        {% if username %}
+          <a class="brand">{{username}}</a>
+        {% endif %}
+        
+        <!--LOGIN-->
+        {% if username %}
+        <form class="navbar-form pull-right" action="/login_to_weibo">
+    		<button type="submit" class="btn">Logout</button>
+    	</form>
+        {% else %}
+        <form class="navbar-form pull-right" action="/login_to_weibo">
+    		<button type="submit" class="btn">LoginWeibo</button>
+    	</form>
+        {% endif %}
+        
+
+        
+        <!--NEARBY-->
+        {% if username %}
+        <form class="navbar-form pull-right" action="/weibo_poi_get">
+    		<button type="submit" class="btn">NearBy</button>
+    	</form>     
+        {% endif %}
+       
+        <!--SEARCH-->
+        {% if username %}
+        <form class="navbar-form pull-right" action="/weibo_position_search_data">
+          <input type="text" name="address" />
+          <!--<input type="submit" />-->
+          <button type="submit2" class="btn">search</button>
+        </form>
+        {% endif %}
+    	</div>
+        
+
+    </div>
+
+
+
+  <div class="row">
+
+    <script type="text/javascript" src="static/js/search_position.js"></script>
+
+    {% if error_info == 'input_error' %}
+          <div class="span4">
+          </div>
+          <div class="span4">
+            <a href="/">请重新输入</a>
+          </div>
+          <div class="span4">
+          </div>
+    {% else %}
+       
+  	  <div class="row-fluid">
+                <div class="span1">
+                </div>
+  	  	<div class="span3">
+                  <div id="container1"  >
+                  </div>
+  	  	</div>
+                
+  	  	<div class="span7">
+                
+                  <div id="map"></div>
+                  
+                    <script id="info" type="text/x-jquery-tmpl">
+                      
+                      <div>
+                      
+                      <a href="">
+                      <img src="" class="img-rounded"/>
+                      </a>
+                      
+                      </div>
+                    </script>
+                  
+                  
+                  
+                  <script type="text/javascript">
+                  
+                  
+                    
+                    fetch = function() {
+                          xhr = null;
+                          var i = 0;
+                      var bdata = ({{str_json}});
+                          
+                          var tst = bdata
+                          var lat1 = 0
+                          var lng1 = 0
+                          
+                          for (var i = 0; i < tst.length; i++ )
+                          {
+                            if ( tst[i].geo != null )
+                            {
+                              if ( tst[i].geo.hasOwnProperty('coordinates') )
+                              {
+                                lat1 = tst[i].geo.coordinates[0];
+                                lng1 = tst[i].geo.coordinates[1];
+                                break;
+                              }
+                            }
+                          }
+                          
+                          
+                          map = new GMaps({
+                          div: '#map',
+                          lat: lat1,
+                          lng: lng1,
+                          height: '675px'
+                          
+                          });
+                          
+                          
+      
+                         for ( var i = 0; i < tst.length; i++ )
+                         {
+                           if ( tst[i].geo != null && tst[i].geo.hasOwnProperty('coordinates') )
+                           {
+                             lat1 = tst[i].geo.coordinates[0];
+                             lng1 = tst[i].geo.coordinates[1];
+                             var img_url = tst[i].original_pic;
+                             var text = tst[i].text;
+                             
+                             map.addMarker(
+                             {
+                               lat: lat1,
+                               lng: lng1,
+                               title: 'Marker with InfoWindow',
+                               infoWindow: {
+                                 content: '<div><p>'+text+'</p>'+'</br><img id='+'"'+'infow' +'"'+' src='+img_url+'></div>'
+                               }
+                             }
+                             );
+                             
+                             
+                             
+             
+                           }
+                           
+                           
+                         }
+    
+                         $("#info").tmpl(tst).appendTo("#container1");
+                      
+                    
+                    
+                    };
+                    fetch();
+                    
+                    
+                  </script>
+                
+                  
+                
+  	  	</div>
+              <div class="span1"></div>
+  	  </div>
+    {% endif %}
+ 
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap-transition.js"></script>
+    <script src="/static/js/bootstrap-alert.js"></script>
+    <script src="/static/js/bootstrap-modal.js"></script>
+    <script src="/static/js/bootstrap-dropdown.js"></script>
+    <script src="/static/js/bootstrap-scrollspy.js"></script>
+    <script src="/static/js/bootstrap-tab.js"></script>
+    <script src="/static/js/bootstrap-tooltip.js"></script>
+    <script src="/static/js/bootstrap-popover.js"></script>
+    <script src="/static/js/bootstrap-button.js"></script>
+    <script src="/static/js/bootstrap-collapse.js"></script>
+    <script src="/static/js/bootstrap-carousel.js"></script>
+    <script src="/static/js/bootstrap-typeahead.js"></script>
+
+  </body>
+
+
+
+</html>

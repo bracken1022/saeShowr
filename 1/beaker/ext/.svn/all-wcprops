@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/showr/!svn/ver/103/1/beaker/ext
+END
+google.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/showr/!svn/ver/101/1/beaker/ext/google.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/showr/!svn/ver/99/1/beaker/ext/__init__.py
+END
+sqla.py
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/showr/!svn/ver/103/1/beaker/ext/sqla.py
+END
+database.py
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/showr/!svn/ver/100/1/beaker/ext/database.py
+END
+memcached.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/showr/!svn/ver/102/1/beaker/ext/memcached.py
+END

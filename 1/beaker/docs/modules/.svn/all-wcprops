@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/showr/!svn/ver/124/1/beaker/docs/modules
+END
+pbkdf2.rst
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/showr/!svn/ver/120/1/beaker/docs/modules/pbkdf2.rst
+END
+google.rst
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/showr/!svn/ver/117/1/beaker/docs/modules/google.rst
+END
+middleware.rst
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/showr/!svn/ver/119/1/beaker/docs/modules/middleware.rst
+END
+util.rst
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/showr/!svn/ver/124/1/beaker/docs/modules/util.rst
+END
+sqla.rst
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/showr/!svn/ver/122/1/beaker/docs/modules/sqla.rst
+END
+synchronization.rst
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/showr/!svn/ver/123/1/beaker/docs/modules/synchronization.rst
+END
+container.rst
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/showr/!svn/ver/115/1/beaker/docs/modules/container.rst
+END
+cache.rst
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/showr/!svn/ver/114/1/beaker/docs/modules/cache.rst
+END
+session.rst
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/showr/!svn/ver/121/1/beaker/docs/modules/session.rst
+END
+database.rst
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/showr/!svn/ver/116/1/beaker/docs/modules/database.rst
+END
+memcached.rst
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/showr/!svn/ver/118/1/beaker/docs/modules/memcached.rst
+END

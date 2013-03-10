@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 22
+/showr/!svn/ver/1600/1
+END
+index.wsgi
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/showr/!svn/ver/43/1/index.wsgi
+END
+instagram_controller.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/showr/!svn/ver/1575/1/instagram_controller.py
+END
+weibo_controller.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/showr/!svn/ver/1424/1/weibo_controller.py
+END
+bottle.py
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/showr/!svn/ver/385/1/bottle.py
+END
+config.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/showr/!svn/ver/1/1/config.yaml
+END
+oauth_parameter.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/showr/!svn/ver/1498/1/oauth_parameter.py
+END
+routers.py
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/showr/!svn/ver/1551/1/routers.py
+END
+weibo.py
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/showr/!svn/ver/60/1/weibo.py
+END

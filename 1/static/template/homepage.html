@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>The weibo image show</title>
+
+        <script src="http://tjs.sjs.sinajs.cn/t35/apps/opent/js/frames/client.js" language="JavaScript"></script>
+        
+	<meta charset="utf-8">
+        <meta property="wb:webmaster" content="19e507f768c68613" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+        
+        <!--oauth-->
+        <meta property="wb:webmaster" content="19e507f768c68613" />
+        
+        <!--for open.weibo.com-->
+        <script src="http://tjs.sjs.sinajs.cn/t35/apps/opent/js/frames/client.js" language="JavaScript"></script>
+        
+	<!--bootstrap-->
+        <link href="static/css/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="static/css/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+	<!--<link href="static/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+        
+        
+
+        
+</head>
+
+<body>
+    <!--nav bar-->
+    <div class="navbar">
+    	<div class="navbar-inner">
+        <!--SHOWR-->
+        <a class="brand" href="/">SHOWR<a>
+        
+        {% if username %}
+          <a class="brand">{{username}}</a>
+        {% endif %}
+        
+        <!--LOGIN-->
+        {% if username %}
+        <form class="navbar-form pull-right" action="/logout">
+    		<button type="submit" class="btn">退出</button>
+    	</form>
+        {% else %}
+        <form class="navbar-form pull-right" action="/login_to_weibo">
+    		<button type="submit" class="btn">登陆</button>
+    	</form>
+        {% endif %}
+        
+        <!--<form class="navbar-form pull-right" action="/login_to_instagram">
+    		<button type="submit" class="btn">登陆inst</button>
+    	</form>-->
+        
+        
+
+        <!--timeline-->
+        {% if username %}
+        <form class="navbar-form pull-right" action="/weibo_user_show">
+    		<button type="submit" class="btn">时间线</button>
+    	</form>     
+        {% endif %}
+        
+        <!--NEARBY-->
+        {% if username %}
+        <form class="navbar-form pull-right" action="/weibo_poi_get">
+    		<button type="submit" class="btn">附近</button>
+    	</form>     
+        {% endif %}
+       
+        <!--SEARCH-->
+        {% if username %}
+        <form class="navbar-form pull-right" action="/weibo_position_search_data" >
+          <input type="text" name="address" hint="上海" />
+          <!--<input type="submit" />-->
+          <input type="submit" class="btn" >
+        </form>
+        {% endif %}
+    	</div>
+
+    </div>
+
+	<!--the part of content--> 
+        
+	<div class="row-fluid">
+		<div class="container-fluid">
+                        <div class="span6" id="picshow">
+				<div class="row-fluid">
+                                    
+					<!--column1-->
+					<div class="span4">
+						<img class="img-rounded" src="http://ww2.sinaimg.cn/bmiddle/69c94e53jw1dy9dcx7swvj.jpg">
+					    <img class="img-rounded" src="http://ww2.sinaimg.cn/bmiddle/62c8ef05jw1dya2bmvegnj.jpg">
+					    <img class="img-rounded" src="http://ww1.sinaimg.cn/bmiddle/6e53d84fjw1dya28arw1sj.jpg">
+					    <img src="http://ww3.sinaimg.cn/bmiddle/5498c4a0jw1dya3ifs3tzj.jpg" class="img-rounded">
+                                            <img src="http://ww3.sinaimg.cn/bmiddle/69c94e53jw1dyaqn04ie1j.jpg" class="img-rounded">
+					</div>
+					<!--column2-->
+					<div class="span4">
+						<img class="img-rounded" src="http://ww1.sinaimg.cn/bmiddle/75f2de3bjw1dy8v5kesodj.jpg">
+						<img class="img-rounded" src="http://ww3.sinaimg.cn/bmiddle/6988e5fejw1dya4aba2bej.jpg">
+						<img src="http://ww4.sinaimg.cn/bmiddle/824bb057jw1dy9k8g3v1jj.jpg" class="img-rounded">
+					</div>
+					<!--column3-->
+					<div class="span4">
+						<img class="img-rounded" src="http://ww2.sinaimg.cn/bmiddle/5498c4a0jw1dy91d16y6jj.jpg">
+						<img class="img-rounded" src="http://ww2.sinaimg.cn/bmiddle/5498c4a0jw1dy98as5nptj.jpg">
+						<img class="img-rounded" src="http://ww1.sinaimg.cn/bmiddle/4cfc228cjw1dy8o7tqrr8j.jpg">
+						<img class="img-rounded" src="http://ww1.sinaimg.cn/bmiddle/5498c4a0jw1dya6zbhahnj.jpg">
+					</div>
+                                    
+                                  
+                                    
+				</div>
+                        </div>
+                  <div class="span2"><h1>show your picture.</h1></div>
+                        
+                        
+			                <div class="span4">
+				            <img src="http://ww1.sinaimg.cn/bmiddle/5498c4a0jw1dy9a1535sij.jpg">
+			                </div>
+                                
+		</div>
+	</div>
+        
+
+        
+        <!--the css config-->
+        <script src="static/js/homepage_config.js"></script>
+        <link href="static/css/homepage_config.css" rel="stylesheet">        
+        
+  <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/js/jquery-1.7.2.js"></script>
+    <script src="/static/js/bootstrap-transition.js"></script>
+    <script src="/static/js/bootstrap-alert.js"></script>
+    <script src="/static/js/bootstrap-modal.js"></script>
+    <script src="/static/js/bootstrap-dropdown.js"></script>
+    <script src="/static/js/bootstrap-scrollspy.js"></script>
+    <script src="/static/js/bootstrap-tab.js"></script>
+    <script src="/static/js/bootstrap-tooltip.js"></script>
+    <script src="/static/js/bootstrap-popover.js"></script>
+    <script src="/static/js/bootstrap-button.js"></script>
+    <script src="/static/js/bootstrap-collapse.js"></script>
+    <script src="/static/js/bootstrap-carousel.js"></script>
+    <script src="/static/js/bootstrap-typeahead.js"></script>
+</body>
+</html>

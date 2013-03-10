@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 28
+/showr/!svn/ver/124/1/beaker
+END
+converters.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/showr/!svn/ver/86/1/beaker/converters.py
+END
+middleware.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/showr/!svn/ver/88/1/beaker/middleware.py
+END
+util.py
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/showr/!svn/ver/91/1/beaker/util.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/showr/!svn/ver/83/1/beaker/__init__.py
+END
+exceptions.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/showr/!svn/ver/87/1/beaker/exceptions.py
+END
+synchronization.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/showr/!svn/ver/90/1/beaker/synchronization.py
+END
+container.py
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/showr/!svn/ver/85/1/beaker/container.py
+END
+cache.py
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/showr/!svn/ver/84/1/beaker/cache.py
+END
+session.py
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/showr/!svn/ver/89/1/beaker/session.py
+END
